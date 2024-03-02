@@ -1,18 +1,22 @@
-print('bu kodun amacı yazıyı türkçe karakterlerden arındırmaktır.\nkodu çalıştırıp metinleri türkçeye özgü harflerden arındırabilirsiniz.\nörn: Türkçe -> Turkce')
-a = (
- """
-"""   
-"""
-bu kodun amacı yazıyı türkce karakterlerden arındırmaktır.
-kodu çalıştırıp metinleri karşılaştırabilirsiniz
-"""
-)
-a = input("metni giriniz: ")
+def main():
+    print('bu kodun amacı yazıyı türkçe karakterlerden arındırmaktır.\nkodu çalıştırıp metinleri türkçeye özgü harflerden arındırabilirsiniz.\nörn: Türkçe -> Turkce')
+    a =""" """
+    a = input("\nmetni giriniz: ")
 
-a = a.replace('ç','c').replace('ş','s').replace('ı','i').replace('ğ','g').replace('ö','o').replace('ü','u').replace('Ç','C').replace('Ş','S').replace('İ','I').replace('Ğ','G').replace('Ö','O').replace('Ü','U')
-print(str(a))
+
+    tr =['ç','ş','ı','ğ','ö','ü','Ç','Ş','İ','Ğ','Ö','Ü']
+    withoutTr=['c','s','i','g','o','u','C','S','I','G','O','U']
+
+    for i in range(12):
+        a=a.replace(tr[i],withoutTr[i])
+    print("\n")
+    print(a)
+    print("\n")
+
 
 
 while True:
-    pass
-
+    main()
+    keepContinue = input("programı yeniden başlatmak için 1 e basın:\n")
+    if keepContinue != "1":
+        break
